@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box  ;
+}
+
+body{
+    background-color: #fef2d8;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    padding-top: 250px;
+}
+
+h2 {
+    margin: 20px; 
+    color:  #f0535d; 
+}
+
+h1 {
+    color: #1c2273;
+}
+
+.box {
+    background-color:  #f0535d;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+    transform: translateX(300%);
+    transition: transform 0.4s ease;
+}
+
+.box:nth-last-of-type(even) {
+    transform: translateX(-300%);
+}
+
+.box.show{
+    transform: translateX(0);
+}
+
+.box h3 {
+    font-size: 30px;
+    color: #fff; 
+}
+
+@keyframes down-up {
+    from {transform: translateY(0);}
+    to {transform: translateY(70px);}
+}
+
+.fleshDown {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: 50px;
+    margin-bottom: 250px;
+    border: 3px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    animation-name: down-up;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-direction: alternate;
+
+}
+
+.fleshDown i {
+    color:  #000;
+    font-size:  40px; 
+}
+
